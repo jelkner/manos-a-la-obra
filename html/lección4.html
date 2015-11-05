@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 4</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Lección 4: Listas</h1>
+
+<h2><br />Listas no ordenadas</h2>
+
+<div class="source" style="width: 700px;">
+<ul style="list-style-type: disc;">
+   <li>	Este es un elemento de la lista o <code>li</code>.</li>
+   <li>	Es una <em>lista no ordenada</em> o <code>ul</code>.</li>
+   <li>	La lista se abre con una <code>&lt;ul&gt;</code>etiqueta.</li>
+   <li>Cada tema esta entre <code>&lt;li&gt;&lt;/li&gt;</code>etiquetas.</li>
+   <li>La lista se cierra con una <code>&lt;/ul&gt;</code> etiqueta.</li>
+</ul>
+</div>
+
+<p>Aquí está la lista de cómo las partes deben buscar juntos:</p>
+<pre class="source" style="width: 700px;">
+&lt;ul&gt;
+  &lt;li&gt;Cosa 1&lt;/li&gt;
+  &lt;li&gt;Cosa 2&lt;/li&gt;
+ &lt;/ul&gt;
+</pre>
+ 
+<p><em style="color: #cc0000;">Nota:</em> <b>los espacios en blanco</b> se
+ignora en HTML fuente (excepto en <code>&lt;pre&gt;&lt;/pre&gt;</code>
+etiquetas), pero el formato <em>es</em> importante para personas que crean y
+mantienen los HTML documentos. Tiene que mantener su fuente HTML limpio con
+sangría y los espacios en blanco para hacer más fácil a leer.</p>
+
+<p>Listas Desordenadas vienen en diferentes estilos. Aquí hay tres de
+ellos:</p>
+
+<div class="source" style="width: 700px;">
+<ul style="list-style-type: disc;">
+  <li><code>&lt;ul style=<q>list-style-type: disc;</q>&gt;</code> es el formato para el uso de discos.</li>
+  </ul>
+  <ul style="list-style-type: circle;">
+    <li><code>&lt;ul style=<q>list-style-type: circle;</q>&gt;</code> marcas de artículos con círculos huecos.</li>
+  </ul>
+  <ul style="list-style-type: square;">
+    <li><code>&lt;ul style=<q>list-style-type: square;</q>&gt;</code> también se limita a lo que pensaría.</li>
+</ul>
+</div>
+
+<p>Usted aprenderá más acerca de cómo los estilos de trabajo en la <a
+href="lección8.html">Lección 8</a>.</p>
+
+<h2>Listas enumeradas</h2>
+
+<div class="source" style="width: 700px;"> 
+  <ol> 
+    <li>Listas enumeradas se utilizan para elementos<em>enumerados</em> </li>
+    <li>Esta es una lista enumerada con el tema que comienza
+    <code>&lt;ol&gt;</code></li>
+    <li>Cada elemento de la lista es todavía un <code>&lt;li&gt;</code>.</li>
+    <li>Cerrar con un <code>&lt;/ol&gt;</code></li>
+  </ol>
+  <ol style="list-style-type: upper-alpha;">
+    <li>Listas enumeradas pueden usar números o letras, mayúsculas o
+    minusculas</li> 
+    <li>Incluso puedes utilizar letras griegas y números
+    romanos..</li> 
+    <li>Esta lista se inició con <code>&lt;ol
+    style="list-style-type: upper-alpha;"&gt;</code>.</li>
+  </ol>
+</div>
+
+
+<h2><br />Listas anidadas</h2>
+
+<p>Listas pueden ser <b>anidadas</b> dentro de otras listas, a cualquier
+nivel que desee. Aquí esta una lista desordenada anidadas dentro de una
+lista ordenada
+que es en sí misma anidadas dentro de otra lista ordenada:</p>
+
+<div class="source" style="width: 700px;">
+<ol style="list-style-type: decimal;">
+  <li>Lista 1 parte 1
+    <ol style="list-style-type: lower-roman;">
+      <li>Lista 2 parte 1
+        <ul style="list-style-type: disc;">
+          <li>Lista 3 parte 1</li>
+          <li>Lista 3 parte 2</li>
+        </ul>
+      </li>
+      <li>Lista 2 parte 2</li>
+    </ol>
+  </li>
+  <li>Lista 1 parte 2</li>
+</ol>
+</div>
+
+<p>El código fuente HTML de esta tiene este aspecto:</p>
+
+<pre class="source" style="width: 700px;">
+&lt;ol style="list-style-type: decimal;"&gt;
+  &lt;li&gt;Lista 1 parte 1
+    &lt;ol style="list-style-type: lower-roman;"&gt;
+      &lt;li&gt;Lista 2 parte 1
+        &lt;ul style="list-style-type: disc;"&gt;
+          &lt;li&gt;Lista 3 parte 1&lt;/li&gt;
+          &lt;li&gt;Lista 3 parte 2&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Lista 2 parte 2&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lista 1 parte 2&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h2><br />Listas de definiciones</h2>
+
+<p>Como se puede imaginar, esta se utiliza para las listas de palabras y sus
+definiciones.</p>
+
+<div class="source" style="width: 700px;">
+<dl>
+ <dt>HTML</dt><dd>Hyper-text Markup Language</dd>
+ <dt>WWW</dt><dd>World Wide Web</dd>
+ <dt>W3C</dt><dd>Consorcio World Wide Web</dd>
+ <dt>dl</dt><dd>lista de definiciónes</dd>
+ <dt>dt</dt><dd>definición de término</dd>
+ <dt>dd</dt><dd>descripción de la definición</dd>
+</dl>
+</div>
+
+<p>El código fuente tiene este aspecto:</p>
+
+<pre class="source" style="width: 700px;">
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;Hyper-text Markup Language&lt;/dd&gt;
+  &lt;dt&gt;WWW&lt;/dt&gt;&lt;dd&gt;World Wide Web&lt;/dd&gt;
+  &lt;dt&gt;W3C&lt;/dt&gt;&lt;dd&gt;Consorcio World Wide Web&lt;/dd&gt;
+  &lt;dt&gt;dl&lt;/dt&gt;&lt;dd&gt;lista de definiciónes&lt;/dd&gt;
+  &lt;dt&gt;dt&lt;/dt&gt;&lt;dd&gt;definición de término&lt;/dd&gt;
+  &lt;dt&gt;dd&lt;/dt&gt;&lt;dd&gt;descripción de la definición&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<div id="exercises">
+<h2>Ejercicios:</h2>
+
+<p>Copia <code>pagina_basica.html</code> a una página llamada
+<code>listas.html</code> y hacer lo siguiente en el nuevo documento:</p>
+<ol>
+  <li>Establecer el título y un título de nivel superior (h1) a <q>Listas</q>.
+  </li>
+
+  <li>Añadir una lista desordenada de los temas de su propia elección.
+  Utilizar un segundo nivel de partida (h2) por encima de esta lista para
+  describir qué tipo de elementos se esta listando.</li>
+
+  <li>Añadir una lista ordenada de los temas de su propia elección. Utilizar
+  un segundo nivel de partida  (h2) por encima de esta lista para describir
+  qué tipo de elementos se esta listando.</li>
+
+  <li>Crear una lista de definiciones de términos y sus descripciones.
+  Utilizar un segundo nivel de partida (h2)por encima de esta lista para
+  describir qué tipo de términos se esta describiendo.</li>
+    
+  <li><i>Crédito extra!</i> Intente cada uno de los siguientes estilos con
+  listas ordenadas: <b>list-style-type</b>: <code>decimal</code>,
+  <code>lower-roman</code>, <code>upper-roman</code>,
+  <code>lower-alpha</code>,
+  y <code>upper-alpha</code>.</li>
+
+  <li><i>Crédito extra!</i> Crear un esquema utilizando una lista dentro de
+  por lo menos tres niveles. Utilice la lista de los tipos de estilo
+  apropiado para cada nivel.</li>
+</ol>
+</div>
+
+<footer>
+<hr>
+<p>Felicidades, usted ha terminado la lección 4;</p>
+<p><a href='lección4.html'>siguiente lección</a> |
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

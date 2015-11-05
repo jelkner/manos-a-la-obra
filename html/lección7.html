@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 7</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Lección 7: Imágenes</h1>
+
+<p>Las imágenes son una parte importante de muchas páginas web. Para incluir
+una imagen en su página, primero debe de ir al archivo donde la imagen se
+encuentra,, y el uso <code>img</code> etiqueta, con la sintaxis:</p>
+
+<pre class="source" style="text-align: center;"> &lt;img src="<em>ubicación
+del archivo de imagen</em>" alt="<em>alt string</em>" /&gt; </pre>
+
+<p>La <q><em>ubicación del archivo de imagen</em></q> debe ser substituida
+con la <b>ruta para la imagen</b>,que al igual que en la lección anterior
+puede ser una URL absoluta o relativa. La <q><em>cadena de alt</em></q> es
+el texto entre comillas que se mostrará cada vez que el archivo de imagen no
+pueda ser encontrado o el navegador no pueda mostrar las imágenes.</p>
+
+<p>Este es un ejemplo:</p>
+
+<div class="source" style="width: 900px; text-align: center;">
+&lt;p&gt;&lt;img scr="imáges/espiralnaranja.png" alt="Espiral Naranja por Jerusalem Tekle"&gt;&lt;/p&gt;
+</div>
+
+<p>Que, suponiendo que el archivo, <code>espiralnaranja.jpg</code> figura en
+un directorio de <code>imágenes</code> en la misma ubicación que el actual
+archivo, muestra la siguiente imagen:</p>
+
+<p style="text-align: center;">
+<img src="imágenes/espiralnaranja.jpg" alt="Espiral Naranja por Jerusalem
+Tekle" /></p>
+
+<div id="ejercicio">
+<h2>Ejercicio:</h2>
+<p>
+Personaliza tu página de inicio mediante la adición de algunas imágenes a la
+misma. Asegúrate de que tengan derechos legales para utilizar las imágenes
+que use en su página. Una forma de hacerlo es elegir una de las fotos que
+Paul Cardunery Will Simpson que han tenido la amabilidad de proveernos
+aqui:</p>
+
+<p style="text-align: center;">
+<a href="http://openbookproject.net/multimedia/paulcardunergraphics">Paul Carduner Graphics</a> |
+<a href="http://palousephotography.org">Palouse Open Source Image Bank</a>
+</p> 
+
+</div>
+
+<footer>
+<hr>
+<p>Felicidades, usted a terminado la Leccion 7;</p>
+<p><a href='lección8.html'>siguiente pagina</a> | 
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

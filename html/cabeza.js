@@ -1,0 +1,3 @@
+function addHeader() {
+    document.getElementById("head").innerHTML = '<header><h1><a href="index.html">Manos a la obra con HTML</a></h1><nav><a id="s1" href="lección1.html">lección 1</a><a id="s2" href="lección2.html">lección 2</a><a id="s3" href="lección3.html">lección 3</a><a id="s4" href="lección4.html">lección 4</a><a id="s5" href="lección5.html">lección 5</a><a id ="s6" href="lección6.html">lección 6</a><a id="s7" href="lección7.html">lección 7</a><a id="s8" href="lección8.html">lección 8</a><a id="s9" href="lección9.html">lección 9</a></nav><p>por Jeffrey Elkner y Jason Straw | traducido por Sharoon Rodriguez y Angela Estrada</p></header>';
+}

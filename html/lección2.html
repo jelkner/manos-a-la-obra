@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 2</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Leccion 2: Encabezados</h1>
+
+<div class="source">
+<h1 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h1&gt;Pais&lt;/h1&gt;</h1>
+<h2 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h2&gt;Region&lt;/h2&gt;</h2>
+<h3 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h3&gt;Estado&lt;/h3&gt;</h3>
+<h4 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h4&gt;Ciudad&lt;/h4&gt;</h4>
+<h5 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h5&gt;Calle&lt;/h5&gt;</h5>
+<h6 style="color: #fff; background-color: #36c; text-align: left;">
+&lt;h6&gt;Casa&lt;/h6&gt;</h6>
+</div>
+
+<p>Las <b>etiquetas del encabezado</b> se utiliza para dividir el documento en
+secciones y subsecciones. El primer encabezado <code>h1</code> es generalmente
+utilizado una vez, ya que este contendra el titulo del documento. Este a menudo
+contendra el mismo contenido como el <code>&lt;title&gt;&lt;/title&gt;</code>
+elemento.
+
+De forma predeterminada, cada elemento del encabezado es para indicar el estilo
+que va disminuyendo entre los diferentes encabezados. El <code>h2</code> es más
+a menudo utilizado como título del contenido, por lo que es el subtítulo y
+dándole menos importancia que <code>h1</code>. El <code>h3</code> recibe mucho
+menos, y así sucesivamente. La cadena decrese hasta llegar al <code>h6</code>.
+Dado que la información no es generalmente dividido en sub-sub-secciones y más
+allá, <code> h4 </code> y por debajo de las etiquetas son menos utilizadas que
+las de líneas de mayor encabezado.</p>
+
+<h2>Validación</h2>
+
+<p>El <a href="http://en.wikipedia.org/wiki/W3c">World Wide Web Consortium</a>
+(W3C) proporciona un sitio web para comprobar 
+<a href="http://validator.w3.org/docs/help.html#validation_basics">validación
+</a> para su página web. El <a href="http://en.wikipedia.org/wiki/URL">URL</a>
+por el validador es <a href="http://validator.w3.org">http://validator.w3.org
+</a>.  Usted puede comprobar sus páginas para ver si estan correctas como
+copiar y pegar, subir, o entrando una dirección web para ellos (si están en un
+sitio web público).</p>
+
+<p>La barra verde significa que la página ha pasado la validación, y la barra
+roja significa que contiene errores. Usted debe revisar todas las páginas a
+medida que avanza a través de este tutorial y asegurarse de que reciba una
+barra verde. </p>
+
+<div id="exercises">
+<h2>Ejercicio:</h2>
+<ol>
+  <li>Copy <code>pagina_basica.html</code> a <code>gdw.html</code> .</li>
+
+  <li>Ponga <q>Manos a la obra HTML</q> en el título y un nivel superior del
+  título (h1) en el cuerpo. </li>
+  
+  <li>Use <code>&lt;h2&gt;&lt;/h2&gt;</code> elementos para crear una secciones
+  con las siguientes etiquetas:
+    <ul>
+      <li>Listas</li>
+      <li>Etiquetas</li>
+      <li>Tablas</li>
+      <li>Enlances</li>
+      <li>Imágenes</li>
+    </ul>
+  </li>
+   
+  <li>Use <code>&lt;h3&gt;&lt;/h3&gt;</code> elementos para crear sub-secciones
+  de <q>Listas</q> con las siguientes etiquetas:
+    <ul>
+      <li>Ordenó</li>
+      <li>Sin Ordenó</li>
+      <li>Definición</li>
+    </ul>
+  Ahora crearemos sub-secciones de las <q>Etiquetas</q> sección con estas
+  etiquetas:
+    <ul>
+      <li>Nivel de bloque Elementos</li>
+      <li>Elementos en línea</li>
+      <li>Elementos de objetos</li>
+      <li>Caracteres especiales</li>
+      </ul>
+  Por último, para el <q>Enlaces sección</q>, crear sub-secciones con estas
+  etiquetas:
+    <ul>
+      <li>absoluta</li>
+      <li>relativa</li>
+    </ul>
+  </li>
+
+  <li> Utilice el validador del W3C para validar las páginas web que ha hecho
+  en esta lección y en la lección 1. Asegúrese de obtener una barra verde en
+  ambas páginas. </li>
+</ol>
+</div>
+
+<footer>
+<hr>
+<p>Felicidades, usted ha terminado la lección 2;</p>
+<p><a href='lección3.html'>siguiente lección</a> |
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

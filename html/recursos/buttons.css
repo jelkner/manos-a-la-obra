@@ -1,0 +1,68 @@
+.cssbtn {
+    display: inline;
+    width: 50px;
+    margin: 0.2em;
+    padding: 1px;
+    font-size: 9px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: left;
+    background: blue;
+    color: #333;
+    border: 1px solid black;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.cssbtn[class] {
+    width: auto;
+    min-width: 50px;
+}
+.cssbtn strong {
+    font-weight: bold;
+    background: white;
+    color: #fff;
+}
+.cssbtn:hover {
+    background: #2d2e5f;
+    color: white;
+}
+.cssbtn:hover strong {
+    background: #ccc;
+    color: black;
+}
+.btnw3c {
+    background: #fff;
+    color: white;
+}
+.btnxml {
+    background: #ccc;
+    color:black;
+}
+.btnw4d {
+    background:#fff;
+    color: white;
+}
+.btnw4d strong {
+    color: #fff;
+}
+.btnpwr {
+    background: #2d2e5f;
+    color: white;
+}
+.btnpwr strong {
+    background: #ccc;
+    color: #000;
+}
+.btnauth {
+    background: #ccc;
+    color: black;
+    margin-right: 5px;
+    text-align: center;
+}
+.btnauth strong {
+    background: #2d2e5f;
+    color: #fff;
+    margin-right: 5px;
+}

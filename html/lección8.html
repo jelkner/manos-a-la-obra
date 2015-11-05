@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 8</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+<h1>Leccion 8: Hojas de Estilo en Cascada</h1>
+
+<p><b>CSS</b> significa <b>C</b>ascading <b>S</b>tyle <b>S</b>heets (Hojas de
+Estilo en Cascada).  Hojas de estilo se utilizan para controlar la apariencia
+de sus páginas xhtml.</p>
+
+<p>Para tener una idea de lo que CSS puede hacer por su página web, eche un
+vistazo a esta página que contiene una tabla de propiedades CSS común:
+<a href="resources/css.html">Propiedades de CSS (hojas de estilo)</a>.
+Ahora mire en la misma página con todos los CSS eliminados: 
+<a href="resources/no_css.html">Propiedades de CSS (sin hoja de estilo)</a>.
+</p>
+
+
+<h2><br />selector (propiedad: valor)</h2>
+
+<p>CSS sytax consta de una colección de <b>pares propiedad-valor</b> que se
+aplicado a un <b>selector</b>. Un selector puede ser una etiqueta xhtml (o una
+clase o nombre de identificacion, que no vamos a discutir aquí). El valor de la
+propiedad pares se adjuntan en corchetes (<code>{}</code>) y separados por un
+punto y coma (<code>;</code>).</p>
+
+<p>Aquí hay un ejemplo de un estilo que se aplica a la etiqueta
+<code>h1</code>:</p>
+<table class="source">
+<tr>
+<td>
+<pre>h1 {
+    color: #ff0000;
+    background-color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+</pre></td>
+</tr>
+</table>
+
+<p>Los dos primeros pares de propiedad-valor fijado el texto de color a rojo y
+el fondo color a blanco. La tercera centra el texto, y la última le da un
+estilo de letra cursiva. Cada una de estas propiedades se aplicarán a
+<code>h1</code> etiquetas de todo el documento.</p>
+
+<p>El espacio en blanco no importa en CSS, de modo que todo podría haber sido
+escrito de esta manera:</p>
+<table class="source">
+<tr>
+<td>
+<code>h1 { color: #ff0000; background-color: #ffffff; text-align: center;
+font-style: italic; }</code>
+</td>
+</tr>
+</table>
+
+<p>el cual no es tan fácil de leer.</p>
+
+
+<h2><br />Incluyendo Hojas de Estilo</h2>
+
+<p>Existen 3 maneras de incluir hojas de estilo en su documento xhtml:</p>
+
+<h3>Hoja de Estilo en linea</h3>
+
+<p>Un estilo puede aplicarse a una sola etiqueta poniéndola entre comillas
+<code>style=</code> después en el interior de la etiqueta</p>
+<table class="source">
+<tr>
+<td>
+<code>&lt;h1 style="text-align: center;"&gt;A Centered Title&lt;/h1&gt;</code>
+</td>
+</tr>
+</table>
+
+<h3>Hoja de Estilo Interior</h3>
+
+<p>Para aplicar un estilo a un documento, pongalo en el interior de la cabeza
+del documento (entre <code>&lt;style&gt;&lt;/style&gt;</code> etiquetas) como
+este:</p>
+<table class="source">
+<tr>
+<td>
+<pre>&lt;head&gt;
+&lt;title&gt;Example Page with Internal Style Sheet&lt;/title&gt;
+&lt;style type="text/css"&gt;
+body {
+    margin: 50px 50px 50px 50px;
+    background-color: #ffffcc;
+}
+h1 {
+    text-align: center;
+    color: #009900;
+    background-color: #ffffcc;
+}
+p {
+    text-align: justify;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+<h3>Hoja de Estilos Externa</h3>
+
+<p>También puede colocar su estilo en un archivo separado y enlasarlo de este
+modo:</p>
+<table class="source">
+<tr>
+<td>
+<pre>&lt;head&gt;
+&lt;title&gt;Example Page with External Style Sheet&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;
+&lt;/head&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+<p>El archivo que contiene la hoja de estilo en este ejemplo se llama
+<code>style.css</code>, pero usted puede nombrar el archivo como desee.</p>
+
+
+<h2><br />Adición de Validación de Botones</h2>
+
+<p>Añadir esto a la parte inferior de sus páginas (justo encima de la etiqueta
+<code>&lt;/body&gt;</code>) para incluir la validación de los botones tanto
+para XHTML 1.1 y CSS:</p>
+<table class="source">
+<tr>
+<td>
+<pre>&lt;p style="text-align: center;"&gt;
+&lt;a href="http://validator.w3.org/check?uri=referer"&gt;
+&lt;img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1"
+style="border: 0;" /&gt;&lt;/a&gt;
+&lt;a href="http://jigsaw.w3.org/css-validator/check/referer"&gt;
+&lt;img src="http://jigsaw.w3.org/css-validator/images/vcss"
+alt="Valid CSS!" style="border: 0;" /&gt;&lt;/a&gt;&lt;/p&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+
+<h2 style="text-align: left;"><br />Ejercicios:</h2>
+<ol>
+  <li>Utilice <code>&lt;span&gt;&lt;/span&gt;</code> etiquetas para cambiar el
+  color de una sola palabra en su página de inicio para el rojo (# FF0000).
+  <br /><br /></li>
+
+  <li>Aplicar <code>text-decoration: line-through</code> en un estilo en línea
+  a un solo párrafo (<code>&lt;p&gt;&lt;/p&gt;</code> etiquetas).
+  <br /><br /></li>
+
+  <li>Copiar <code>paginal_basica.html</code> a
+  <code>estilo_interior.html</code>.  Añadir una hoja de estilo interna a este
+  nuevo documento.<br /><br /></li>
+
+  <li>Copiar <code>estilo_interior.html</code> a
+  <code>estilo_externa.html</code> . Copie el interior de estilo que ha creado
+  en el ejercicio anterior a un archivo nombrado <code>externa.css</code> y
+  modifique <code>external_style.html</code> utilizando esta hoja de estilos
+  externa.<br /><br /></li>
+
+  <li>Añadir la validacion de botones  de cada uno de sus páginas web.
+  Compruebe que cada uno de ellos sea válido XHTML 1.1 y CSS 2.1.
+  <br /><br /></li>
+
+  <li>Utilize sus nuevos conocimientos de CSS para darle vida a sus páginas
+  web!<br /><br /></li>
+</ol>
+
+
+<p style="text-align: center;">Felicidades, usted a terminado la Leccion 8;</p>
+<p style="text-align: center;">
+<a href='lección9.xhtml'>siguiente pagina</a> | 
+<a href="index.xhtml">pagina principal</a></p>
+
+<div id="foot"></div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la obra con HTML: Lección 1</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Lección 1: Comenzando</h1>
+
+<p>Esta es la página básica que usaremos. No tiene ningún contenido,
+excepto por un enlace de validación al final de la página:</p>
+
+<h2>Página Básica</h2>
+
+<pre class="source" style="width: 400px;">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Contiene todo lo que un navegador necesita para crear una página web.
+Define el <a
+href="http://es.wikipedia.org/wiki/Document_Type_Declaration">DOCTYPE</a>,
+el idioma, el encabezado y el cuerpo o sección de contenido de la página.
+Cualquier información que el navegador usará para crear la página estará
+entre <q>&lt;</q> y <q>&gt;</q>. Éstos se llaman <a
+href="http://es.wikipedia.org/wiki/Par%C3%A9ntesis">corchetes
+angulares</a>. Los corchetes angulares se utilizan para encerrar <a
+href="http://es.wikipedia.org/wiki/Etiquetas_HTML#Marcado_HTML">etiquetas
+</a>, que se ven así:</p> 
+
+<pre class="source" style="width: 300px;
+text-align: center;">
+&lt;<em>tipo-de-etiqueta</em>&gt;&lt;/<em>tipo-de-etiqueta</em>&gt;
+</pre>
+
+<p>La mayoría de las etiquetas se utilizan en parejas, con una <b>etiqueta
+de apertura</b> y una <b>etiqueta de cierre</b>. Las etiquetas de apertura
+y cierre son iguales, excepto que la de cierre empieza con <q>&lt;/</q> en
+lugar de solamente con <q>&lt;</q>.Las etiquetas de apertura y cierre así
+como con el contenido entre ellos forman una contexto entre ellos en la
+forman un <b>elemento</b> html.</p>
+
+
+<h2>Comentarios</h2>
+
+<p>Los <a
+href="http://es.wikipedia.org/wiki/Comentario_(desambiguaci%C3%B3n)">Comentarios</a>
+contienen información para que la vea el webmaster, pero no para el
+visitante de la página web (el navegador no los muestra). También se
+pueden usar para hacer que el navegador ignore temporalmente partes de una
+página (esto se llama <q>esconder</q>) que contiene errores.</p>
+
+<p>Si quiere crear un comentario use:</p>
+<pre class="source" style="width: 400px; text-align: center">
+&lt;!-- escriba su comentario aquí --&gt;
+</pre>
+
+<p>Hemos marcado nuestra página básica con comentarios indicando dónde
+añadirá usted el contenido.</p>
+
+<div id="exercises">
+<h2>Ejercicios:</h2>
+  <ol>
+    <li>Vamos a crear nuestra primera página web:
+      <ol>
+        <li>Abra su 
+        <a href="http://es.wikipedia.org/wiki/Editor_de_texto">editor de
+        texto</a> preferido.</li> <li>Copie y pegue el contenido de
+        <i>Página Básica</i> en su nuevo documento.</li> 
+        <li>Guarde el nuevodocumento como <code>pagina_basica.html</code>.</li>
+        <li>Agregue estos comentarios abajo de la etiqueta <code>&lt;body&gt;</code>
+        <pre>
+         &lt;!-- Comience su contenido aquí... --&gt;
+
+         &lt;!-- Su contenido finaliza aquí... --&gt;</pre>
+         Usted ahora colocara todo el contenido de su página web entre estos
+         dos comentarios.</li> 
+     </ol> 
+     
+     <i>Nota:</i> No haga más cambios a <code>pagina_basica.html</code>.
+  Nosotros copiaremos y nombraremos cada vez que empecemos una nueva página.</li>
+
+    <li>Haga una copia de <code>pagina_basica.html</code> y nómbrela
+    <code>index.html</code>. Abra <code>index.html</code> en el <a
+        href="http://es.wikipedia.org/wiki/Navegador_web">navegador web</a>.
+    Tome nota del texto que aparece en la barra de título de la ventana del
+    navegador.  Cambiaremos ésto en el siguiente ejercicio.
+    </li>
+
+    <li>Cambie el título (entre las etiquetas title) para que diga: <q>¡Mi
+        Nueva Página en HTML!</q>. Verifique que aparezca en la barra de título
+    de la ventana de su navegador cuando recargue la pagina.</li>
+
+    <li><p>Ponga este mismo texto (<q>¡Mi Nueva Página en HTML!</q>) entre las
+    etiquetas <code>&lt;h1&gt;&lt;/h1&gt;</code> en el interior del cuerpo de
+    su documento (entre las etiquetas <code>body</code>).  ¿Qué sucede cuando
+    hace esto?</p>
+  
+    <p><i>Nota:</i> Cualquier cosa escrita entre <code>&lt;body&gt;</code> y
+    <code>&lt;/body&gt;</code> se mostrará en su página, aunque para ser <a
+        href="http://es.wikipedia.org/wiki/Lenguaje_de_marcado">marcado</a>
+    correctamente, todo el contenido debe estar encerrado entre etiquetas. Todo
+    lo que esté entre <code>&lt; &gt;</code> no aparecerá.</p></li> 
+  </ol>
+</div>
+
+
+<footer>
+<hr>
+<p>Felicidades, ha terminado la lección 1.</p>
+<p><a href='lección2.html'>siguiente lección</a> |
+<a href="index.html">página principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

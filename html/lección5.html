@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 5</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Lección 5: Tablas</h1>
+
+<p>HTML las mesas están diseñadas para mantener los datos en forma de
+cuadro, de esta forma: </p>
+
+<table class="source">
+<tr>
+<td>
+<table>
+  <tr><th colspan="2">Resumen del Crecimiento de la Web (*)</th></tr>
+  <tr><th>Mes</th><th>Número de Sitios Web</th></tr>
+  <tr><td>6/93</td><td>130</td></tr>
+  <tr><td>12/93</td><td>623</td></tr>
+  <tr><td>6/94</td><td>2,738</td></tr>
+  <tr><td>12/94</td><td>10,022</td></tr>
+  <tr><td>6/95</td><td>23,500</td></tr>
+  <tr><td>1/96</td><td>100,000</td></tr>
+  <tr><td>6/96</td><td>230,000 (est)</td></tr>
+  <tr><td>1/97</td><td>650,000 (est)</td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+<p>El código de fuente de este cuadro es similar al siguiente:</p>
+
+<table class="source">
+<tr>
+<td>
+<pre>&lt;table&gt;
+  &lt;tr&gt;&lt;th colspan="2"&gt;Resumen del Crecimiento de la Web (*)&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Mes&lt;/th&gt;&lt;th&gt;Número de Sitios Web&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;6/93&lt;/td&gt;&lt;td&gt;130&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;12/93&lt;/td&gt;&lt;td&gt;623&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;6/94&lt;/td&gt;&lt;td&gt;2,738&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;12/94&lt;/td&gt;&lt;td&gt;10,022&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;6/95&lt;/td&gt;&lt;td&gt;23,500&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;1/96&lt;/td&gt;&lt;td&gt;100,000&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;6/96&lt;/td&gt;&lt;td&gt;230,000 (est)&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;1/97&lt;/td&gt;&lt;td&gt;650,000 (est)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+<p>Aquí están las etiquetas que se utilizan con las tablas:</p>
+<div class="source" style="width: 600px;">
+<dl>
+  <dt><code>&lt;tabla&gt;&lt;/tabla&gt;</code></dt>
+  <dd>Estas etiquetas adjuntan toda la tabla. Poner en
+  <code>&lt;tabla&gt;</code>en el inicio de la mesa y
+  <code>&lt;/tabla&gt;</code> en la parte final de la misma.</dd>
+
+  <dt><code>&lt;tr&gt;&lt;/tr&gt;</code></dt>
+  <dd>Fila de la tabla - una fila de la tabla.</dd>
+
+  <dt><code>&lt;th&gt;&lt;/th&gt;</code></dt> <dd>Cuadro de partida -
+  atributos por defecto de esta etiqueta suelen ser audaces y centrada.
+  Utilízalo para colocar títulos en su mesa.</dd>
+
+  <dt><code>&lt;td&gt;&lt;/td&gt;</code></dt> <dd>Tabla de datos - esto
+  especifica una celda de la tabla (como lo hace <code>th</code>). Cada fila
+  de la tabla debería tener el mismo número de ellos, a menos que
+  <code>colspan="x"</code> es utilizado como un atributo <em>dentro</em> de
+  la etiqueta apertura para indicar que se extiende por más de una
+  columna.</dd> 
+</dl>
+</div>
+
+<div id="ejercicio">
+<h2>Ejercicio:</h2>
+
+<p>Una vez más, copia <code>pagina_basica.html</code> a un nuevo archivo
+llamado <code>tabla.html</code> y establezca el título y un nivel superior a
+la partida <q>Cuadro</q>.Usa lo que has aprendido en esta lección para
+producir la siguiente tabla (**) en el nuevo documento:</p>
+
+<p><img src="imágenes/tabladecbinocthex.png"
+alt="Tabla de valores decimal, binary, octal y hexidecimal" /></p>
+
+<cite>(*) Del sitio Web Matthew K. Gray 's @ <a
+        href="http://www.mit.edu/people/mkgray/net/web-growth-summary.html">
+        http://www.mit.edu/people/mkgray/net/web-growth-summary.html</a>
+</cite>
+
+<cite>(**) El cuadro que se muestra aquí es una imagen de modo que la fuente
+    no esta disponible y el ejercicio es más difícil ;-) </cite>
+</div>
+
+<footer>
+<p>Felicidades, usted a terminado la Lección 5;</p>
+<p><a href='lección6.html'>siguiente lección</a> | 
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

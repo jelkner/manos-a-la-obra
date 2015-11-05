@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 3</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Leccion 3: Etiquetas y Caracteres Especiales</h1>
+
+<p>Las etiquetas vienen en dos variedades: <b>a nivel de bloque</b> de
+elementos, que marca grandes secciones o <em>bloques</em>, en su documento,
+y <b>en línea</b> de elementos, que son los pequeños trozos, por lo general
+contienen  una sola línea.
+
+<p>El navegador web pone nuevas líneas (creo <code>Enter</code> en el
+teclado) alrededor de los elementos a nivel de bloque para que aparezcan en
+su propia línea.<p> 
+
+<p>La Siguente fuente:</p>
+<pre class="source">
+&lt;p&gt;p elemento &lt;/p&gt;&lt;div&gt;div elemento &lt;/div&gt;
+&lt;section&gt;section elemento&lt;/section&gt;
+&lt;b&gt;b elemento &lt;/b&gt;&lt;i&gt;i element &lt;/i&gt;
+&lt;span&gt;span elemento &lt;/span&gt;&lt;code&gt;code elemento &lt;/code&gt;
+</pre>
+
+<p>Representa la siguiente manera:</p>
+
+<div class="source"
+<p>p element </p><div>div element </div>
+<section>section element</section>
+<b>b element </b><i>i element </i>
+<span>span element </span><code>code element </code>
+</div>
+
+<p>Observe que el nivel de los elementos de bloque hacen su propia línea
+(con espacio adicionales debajo de los elementos <code>p</code>), mientras
+que los elementos de línea son todos que estan en la misma línea.</p>
+
+<p>En versiones anteriores de HTML, la distinción entre el nivel de bloque y
+elementos en línea era una parte firme del lenguaje HTML, junto con una
+regla que los elementos en línea se adjunta dentro de un elemento a nivel de
+bloque que sintácticamente es válida.</p>
+
+<p>Con HTML 5, esta distinción es muy relajado, y es posible utilizar <a
+href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> para
+convertir una lista dada a cualquier nivel de bloque o en línea.</p>
+
+<h2>Elementos a nivel de bloques</h2>
+
+<p>Éstos son algunos de los más comunes (y más útiles) con elementos de
+comportamiento por defecto a nivel de bloque:</p>
+
+<div class="source"> <dl> <dt>&lt;p&gt;&lt;/p&gt;</dt> <dd>Párrafo.
+Probablemente, la etiqueta más común que vaya utilizar, se marca el comienzo
+y el final de un párrafo del texto.</dd>
+
+ <dt>&lt;pre&gt;&lt;/pre&gt;</dt> <dd>Texto preformateado. Esta etiqueta es
+buena para los ejemplos de código de fuente.</dd>
+
+ <dt>&lt;div&gt;&lt;/div&gt;</dt>
+ <dd>Nivel de bloque de división lógica. Sin atributos por defecto.</dd>
+
+ <dt>&lt;h1&gt;&lt;/h1&gt;...&lt;h6&gt;&lt;/h6&gt;</dt>
+ <dd>Todas las etiquetas de título son las etiquetas a nivel de bloque.</dd>
+</dl>
+
+<hr>
+  <p>Los siguientes elementos nuevos en HTML 5:</p>
+    <dl>
+      <dt>&lt;header&gt;&lt;/header&gt;</dt>
+      <dd>Marcas de la parte superior, o encabezado, de una página web.</dd>
+
+     <dt>&lt;footer&gt;&lt;/footer&gt;</dt>
+     <dd>Marcas de la parte inferior, o pie de página, de una página
+     web.</dd>
+
+     <dt>&lt;nav&gt;&lt;/nav&gt;</dt>
+     <dd>Se utiliza para marcar una sección de exploración.</dd>
+
+     <dt>&lt;section&gt;&lt;/section&gt;</dt>
+     <dd>Se utiliza para incluir otros elementos que componen una sección de
+     una página web.</dd>
+    </dl>
+</div>
+
+<h2>Elementos en línea</h2>
+
+<p>Éstos son algunos de los elementos en línea más comunes junto con sus
+usos y atributos por defecto:</p> 
+
+<div class="source">
+<dl>
+ <dt>&lt;strong&gt;&lt;/strong&gt;</dt>
+ <dd>Se utiliza para el texto que desea resaltar.</dd>
+
+ <dt>&lt;b&gt;&lt;/b&gt;</dt>
+ <dd>El texto en negrita.</dd>
+
+ <dt>&lt;em&gt;&lt;/em&gt;</dt>
+
+ <dd>Hace énfasis en el texto codificado.</dd>
+
+ <dt>&lt;i&gt;&lt;/i&gt;</dt>
+ <dd>El texto en cursiva</dd>
+
+ <dt>&lt;q&gt;&lt;/q&gt;</dt>
+ <dd>Marca el comienzo y el final de una cita.</dd>
+
+ <dt>&lt;code&gt;&lt;/code&gt;</dt>
+ <dd>Indica que el texto adjunto es el código fuente.</dd>
+
+ <dt>&lt;kbd&gt;&lt;/kbd&gt;</dt>
+ <dd>Indica el texto adjunto que es introducido por el usuario desde un teclado.</dd>
+
+ <dt>&lt;sup&gt;&lt;/sup&gt;</dt>
+ <dd>Encierra el texto de superíndice.</dd>
+
+ <dt>&lt;sub&gt;&lt;/sub&gt;</dt>
+ <dd>Encierra el texto de subíndice.</dd>
+
+ <dt>&lt;a&gt;&lt;/a&gt;</dt>
+ <dd>Establece un ancla que se utiliza para crear un enlace o un marcador dentro de un documento.<br />
+ (see <a href="lección6.html">Lección 6</a>).</dd>
+ 
+ <dt>&lt;span&gt;&lt;/span&gt;</dt>
+ <dd>Línea de división lógica. Sin atributos por defecto.</dd>
+</dl>
+</div>
+
+<h2>Elementos de Objeto</h2>
+
+<p>Estas tres etiquetas son especiales, porque insertan objetos en lugar de
+encerrar. Dado que no hay nada que <q>contenga</q>, no tienen una lista de
+cierre:</p> 
+
+<div class="source">
+<dl>
+ <dt>&lt;br&gt;</dt>
+ <dd>Salto de línea. Esta lista obliga a una línea a retornar.</dd>
+
+ <dt>&lt;img&gt;</dt>
+ <dd>Lista de imagen. Se utiliza para mostrar una imagen.
+ (see <a href="lección7.html">Lección 7</a>).</dd>
+
+ <dt>&lt;hr&gt;</dt>
+ <dd>Regla horizontal. Coloca una linea horizontal a través de la página.</dd>
+</dl>
+</div>
+
+<h2>Caracteres especiales</h2>
+
+<p>Puesto que <code>&lt;</code>, <code>&gt;</code>, y <code>&amp;</code>
+tienen un significado especial en HTML, no se pueden utilizar para
+representarse a sí mismas en un documento HTML. Cuando usted desea
+utilizarlos, literalmente, (como en los ejemplos de código HTML), tiene que
+marcarlos con códigos especiales: 
+
+<table class="source" style="width: 400px;">
+<tr>
+ <th style="text-align: left; width: 200px;">MARK-UP</th>
+ <th style="text-align: left; width: 200px;">RENDER</th>
+</tr>
+<tr>
+ <td>&amp;lt;</td><td>&lt;</td>
+</tr>
+<tr>
+ <td>&amp;gt;</td><td>&gt;</td>
+</tr>
+<tr>
+ <td>&amp;amp;</td><td>&amp;</td>
+</tr>
+<tr>
+ <td>&amp;nbsp;</td><td>espacio de no separación</td>
+</tr>
+</table>
+
+<p>El marcado de un ejemplo como este:</p>
+
+<pre class="source">
+&amp;lt;h2&amp;gt;Uso de caracteres especiales a la fuente del marcado HTML&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;
+La fuente del marcado HTML requiere de caracteres especiales para reemplazar las apariciones de  &amp;lt;, &amp;gt;, and &amp;amp;.
+&amp;lt;/p&amp;gt;
+</pre>
+
+<p>No es bonito, pero funciona</p>
+
+<div id="ejercicios">
+<h2>Ejercicios:</h2>
+
+<p>Copia <code>pagina_basica.html</code> a una página llamada
+<code>etiquetas.html</code> y haz lo siguiente en el nuevo documento:</p>
+<ol>
+  <li>Establecer el título y un título de nivel superior (&lt;h1&gt;&lt;/h1&gt;) a <q>Etiquetas</q>.</li>
+
+  <li>Copia y pega el siguiente texto entre
+  <code>&lt;pre&gt;&lt;/pre&gt;</code>etiquetas:
+  <pre class="source">
+ Este             texto
+
+         se           extiende         por      varios
+    líneas
+
+                      y    tiene     un         montón
+   de          extra              
+
+ espacio en      blanco.
+</pre>
+  Describe lo que ves. A continuación, reemplace las listas &lt;pre&gt; con
+  las etiquetas &lt;p&gt; y vuelva a recargar la página en su navegador.
+  ¿Qué sucede?  </li>
+
+  <li>Prueve las dos <code>&lt;div&gt;&lt;/div&gt;</code> y
+  <code>&lt;span&gt;&lt;/span&gt;</code> en el documento. ¿Qué parece que
+  hay qu  e hacer?</li>
+
+  <li>Use cada uno de los listas restantes de esta lección en su página.
+  Escriba las etiquetas que utiliza en un bloc de notas junto con una
+  descripción de lo que cada uno de ellos hace para que el texto
+  encierre.</li>
+
+  <li>Revise su página con el <a href="http://validator.w3.org">W3C Markup
+      Validation Service</a>. Si su página tiene errores de sintacis, debe
+  de corregirlos.</li> <li>Crear un ejemplo de código fuente HTML de la
+  página. Usted tendrá que utilizar los caracteres especiales para hacer
+  esto.</li> 
+</ol> 
+</div>
+
+<footer>
+<hr>
+<p>Felicidades, usted ha terminado la lección 3;</p>
+<p><a href='lección4.html'>siguiente lección</a> |
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manos a la Obra con HTML: Lección 6</title>
+<style type="text/css">
+@import url(manoshtml.css);
+@import url(lección.css);
+</style>
+<script type="text/javascript" src="cabeza.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<!--
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+-->
+</head>
+
+<body onload="addHeader(); addFooter()">
+<div id="head"></div>
+
+<h1>Lección 6: Enlaces</h1>
+
+<h2>Formato</h2>
+
+<p>Los enlaces son una parte esencial de un sitio web, ya que con un simple
+clic del ratón le permiten transferirse a cualquier otra página en la
+web.</p>
+
+<p>El formato de un vínculo parecido a éste:</p>
+
+<pre class="source" style="width: 500px; text-align: center;"> &lt;a
+href="index.xhtml"&gt;Volver al inicio&lt;/a&gt; </pre>
+
+<p>Veamos cada una de las partes de esta declaración:</p> 
+
+<div class="source">
+<dl>
+  <dt><code>&lt;a ...&gt;</code></dt><dd>es la etiqueta de apertura de
+  anclaje.</dd>
+
+  <dt><code>href="index.html"</code></dt><dd>define un valor par atributo.
+  El atributo en este caso es <b>href</b>, que se sitúa como <q>referencia de
+  hipertexto</q>. <code>index.html</code> es el <b>valor</b> del atributo
+  <code>href</code>, que se asigna, o destino, con el atributo por el
+  operador d  e asignación (<code>=</code>).</dd> 
+
+  <dt><code>Volver al inicio</code></dt>
+  <dd>es una etiqueta en la que el usuario haga clic para <b>seguir</b>
+  enlasado.</dd>
+
+  <dt><code>&lt;/a&gt;</code></dt>
+  <dd>es el ancla de la etiqueta de cierre.</dd>
+</dl>
+</div>
+
+<h2>Attributes</h2>
+
+<p>Información adicional se puede dar a un elemento HTML usando <a
+href="http://www.htmlquick.com/es/tutorials/tags-attributes.html#attributes">atributos</a>.
+Los <b>atributos</b> se asignan (o <i>unidos a</i>) <b>los valores</b> el
+<b>operador de asignación</b> (<code>=</code>). El valor está entre
+comillas(""). La sintaxis general es la siguiente:</p>
+
+<div class="source" style="width: 300px; text-align: center;">
+<em>atributo</em>="<em>value</em>"
+</div>
+
+<h2>Hipertexto</h2>
+
+<p>El atributo en la etiqueta de anclaje, <code>href</code>, es sinónimo de
+<a href="http://es.wikipedia.org/wiki/Hipertexto">hipertexto</a> de
+referencia. Es el <code>href</code> atributo que convierte el elemento de
+anclaje en un <a
+href="http://es.wikipedia.org/wiki/Hiperenlace">hiperenlance</a> (o como más
+comúnmente se llama, <b>enlance</b>). Los enlances son lo que impulsa <a
+href="http://es.wikipedia.org/wiki/World_Wide_Web">World Wide Web</a> y la
+hace tan popular.   
+
+<h2>Ubicación</h2>
+
+<p>El valor de un atributo href es por lo general una dirección web, que
+describe la localización de otra página web. Las direcciones Web también se
+conocen como <a href="http://en.wikipedia.org/wiki/Web_address">URLs</a>.
+Hay dos maneras de especificar la <b>ubicación</b> de un enlace de
+hipertexto:</p>
+
+<h3>Ubicación Absoluta</h3>
+
+<p>Una <code>ubicación absoluta</code> usa por completo el URL, ejemplo:
+<code>http://openbookproject.net/tutorials/manos/xhtml/index.xhtml</code>.
+Esto no solamente tedioso para escribir, pero con Ubicación Absoluta hace
+difícil de mover su sitio web, que nos lleva a ...</p>
+
+<h3>Ubicación Relativa</h3>
+
+<p>Digamos, que quieres ir de</p>
+
+<p><code>http://openbookproject.net/tutorials/manos/xhtml/lección6.xhtml</code>.
+</p>
+
+<p>a</p>
+
+<p><code>http://openbookproject.net/tutorials/manos/xhtml/lección7.xhtml</code>.
+</p>
+
+<p>Desde el interior de la <code>lección6.xhtml</code> archivo, el enlace
+sólo se debe escribir asi:</p>
+
+<pre class="source" style="width: 500px; text-align: center;"> &lt;a
+href="lección7.xhtml"&gt;Lección 7&lt;/a&gt; </pre>
+
+<div id="ejercicios">
+<h2>Ejercicios:</h2>
+  <ol>
+    <li>En la página web llamada <code>gdw.html</code> que creó en la lección
+     2, crear vínculos de cada sub-partida a una página web local que
+     contenga la información sobre ese tema. Por ejemplo: los
+     <code>elementos en línea</code> sub-título de la sección de
+     <code>Etiquetas</code> debe enlace a una página we  b llamada
+     <code>inline.html</code> que contiene información acerca de los elem
+     entos en línea.  </li>
+
+     <li>Crear un nuevo nivel 2 titulado <q>Mis Sitios Favoritos</q> en su
+     <code>gdw.html</code> documento.  Crear una lista desordenada de
+     enlaces de algunos de sus sitios web favoritos. Usted necesitara
+     utilizar <em>enlaces absolutos</em> para estos sitios.</li> 
+  </ol>
+</div>
+
+<footer>
+<p>Felicidades, usted a terminado la Lección 6;</p>
+<p><a href='lección7.html'>siguiente lección</a> | 
+<a href="index.html">pagina principal</a></p>
+<div id="foot"></div>
+</footer>
+
+</body>
+</html>
